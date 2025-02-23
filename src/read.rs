@@ -993,7 +993,7 @@ impl<R: Read + Seek> ZipArchive<R> {
         })
     }
 
-    fn by_index_with_optional_password(
+    pub fn by_index_with_optional_password(
         &mut self,
         file_number: usize,
         mut password: Option<&[u8]>,
